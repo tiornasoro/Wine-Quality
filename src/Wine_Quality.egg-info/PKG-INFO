@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: Wine-Quality
+Version: 0.0.0
+Summary: A small python package for machine learning app
+Home-page: https://github.com/Soro/Wine-Quality
+Author: Soro
+Author-email: tiornasoro094@gmail.com
+Project-URL: Bug Tracker, https://github.com/Soro/Wine-Quality/issues
