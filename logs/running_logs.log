@@ -1,1 +1,422 @@
 [2024-03-01 15:01:00,808:INFO:main: Welcome]
+[2024-03-02 13:35:59,238:INFO:main: >>>>> stage Data Ingestion stage started  <<<<<<<<<]
+[2024-03-02 13:35:59,266:ERROR:main:[Errno 2] No such file or directory: 'e:\\wine-quality\\config\\config.yaml']
+Traceback (most recent call last):
+  File "E:\Wine-Quality\main.py", line 8, in <module>
+    data_ingestion.main()
+  File "e:\wine-quality\src\Wine_Quality\pipeline\stage_01_data_ingestion.py", line 12, in main
+    config = ConfigurationManager()
+  File "e:\wine-quality\src\Wine_Quality\config\configuration.py", line 12, in __init__
+    self.config = read_yaml(config_filepath)
+  File "E:\Wine-Quality\venvnq\lib\site-packages\ensure\main.py", line 849, in __call__
+    return_val = self.f(*args, **kwargs)
+  File "e:\wine-quality\src\Wine_Quality\utils\common.py", line 36, in read_yaml
+    raise e
+  File "e:\wine-quality\src\Wine_Quality\utils\common.py", line 29, in read_yaml
+    with open(path_to_yaml) as yaml_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'e:\\wine-quality\\config\\config.yaml'
+[2024-03-02 14:01:53,258:INFO:main: >>>>> stage Data Ingestion stage started  <<<<<<<<<]
+[2024-03-02 14:01:53,258:INFO:common:yaml file: e:\wine-quality\config\config.yaml loaded successfully]
+[2024-03-02 14:01:53,258:INFO:common:yaml file: e:\wine-quality\params.yaml loaded successfully]
+[2024-03-02 14:01:53,258:INFO:common:yaml file: e:\wine-quality\schema.yaml loaded successfully]
+[2024-03-02 14:01:53,258:INFO:common:created directory at: artifacts]
+[2024-03-02 14:01:53,258:INFO:common:created directory at: artifacts/data_ingestion]
+[2024-03-02 14:01:54,248:INFO:data_ingestion:artifacts/data_ingestion/data.zip download with following info: 
+Server: GitHub.com
+Date: Sat, 02 Mar 2024 13:01:55 GMT
+Content-Type: text/html; charset=utf-8
+Vary: X-PJAX, X-PJAX-Container, Turbo-Visit, Turbo-Frame, Accept-Encoding, Accept, X-Requested-With
+ETag: W/"20ed9777ceaf4f253f8743c990984bb6"
+Cache-Control: max-age=0, private, must-revalidate
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+X-Frame-Options: deny
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Referrer-Policy: no-referrer-when-downgrade
+Content-Security-Policy: default-src 'none'; base-uri 'self'; child-src github.com/assets-cdn/worker/ gist.github.com/assets-cdn/worker/; connect-src 'self' uploads.github.com www.githubstatus.com collector.github.com raw.githubusercontent.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com api.githubcopilot.com objects-origin.githubusercontent.com *.actions.githubusercontent.com wss://*.actions.githubusercontent.com productionresultssa0.blob.core.windows.net/ productionresultssa1.blob.core.windows.net/ productionresultssa2.blob.core.windows.net/ productionresultssa3.blob.core.windows.net/ productionresultssa4.blob.core.windows.net/ productionresultssa5.blob.core.windows.net/ productionresultssa6.blob.core.windows.net/ productionresultssa7.blob.core.windows.net/ productionresultssa8.blob.core.windows.net/ productionresultssa9.blob.core.windows.net/ productionresultssa10.blob.core.windows.net/ productionresultssa11.blob.core.windows.net/ productionresultssa12.blob.core.windows.net/ productionresultssa13.blob.core.windows.net/ productionresultssa14.blob.core.windows.net/ productionresultssa15.blob.core.windows.net/ productionresultssa16.blob.core.windows.net/ productionresultssa17.blob.core.windows.net/ productionresultssa18.blob.core.windows.net/ productionresultssa19.blob.core.windows.net/ github-production-repository-image-32fea6.s3.amazonaws.com github-production-release-asset-2e65be.s3.amazonaws.com insights.github.com wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com objects-origin.githubusercontent.com; frame-ancestors 'none'; frame-src viewscreen.githubusercontent.com notebooks.githubusercontent.com; img-src 'self' data: github.githubassets.com media.githubusercontent.com camo.githubusercontent.com identicons.github.com avatars.githubusercontent.com github-cloud.s3.amazonaws.com objects.githubusercontent.com secured-user-images.githubusercontent.com/ user-images.githubusercontent.com/ private-user-images.githubusercontent.com opengraph.githubassets.com github-production-user-asset-6210df.s3.amazonaws.com customer-stories-feed.github.com spotlights-feed.github.com objects-origin.githubusercontent.com *.githubusercontent.com; manifest-src 'self'; media-src github.com user-images.githubusercontent.com/ secured-user-images.githubusercontent.com/ private-user-images.githubusercontent.com github-production-user-asset-6210df.s3.amazonaws.com gist.github.com; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; upgrade-insecure-requests; worker-src github.com/assets-cdn/worker/ gist.github.com/assets-cdn/worker/
+Set-Cookie: _gh_sess=5e4jIsPsGIO0q4oOMoBnnQ3B%2FyBazh56u6pc0INdMJ9egng7TUsL7yvHLWDztxLVUQdGFaa9NrQ1mxF0R52hiR%2FAeUz3kJvedUUZ6N6kXXSBrfsxoUTdt2ABnv6M%2FXT8TwNMDTYoV2NcZNNX4cKcDxMfuxLLwY9w3etCnhM%2F02tpHngJsEM50ccoRXqnDAQDFQTkAj7%2FsSK3FKMat0aW0mDOAJZZfqTWzLGGit8Jb1DOyJffDhK3KY%2FOcDmiiZcHcMC0nyrJGDVMFe%2FKM%2BASNg%3D%3D--JrA5Mr86haLwMDcX--6O1BZSOV2ArCL%2FMzi1kq8Q%3D%3D; Path=/; HttpOnly; Secure; SameSite=Lax
+Set-Cookie: _octo=GH1.1.732865019.1709384515; Path=/; Domain=github.com; Expires=Sun, 02 Mar 2025 13:01:55 GMT; Secure; SameSite=Lax
+Set-Cookie: logged_in=no; Path=/; Domain=github.com; Expires=Sun, 02 Mar 2025 13:01:55 GMT; HttpOnly; Secure; SameSite=Lax
+Accept-Ranges: bytes
+Transfer-Encoding: chunked
+X-GitHub-Request-Id: 0D13:270284:224D16B:22D80E1:65E32343
+connection: close
+
+]
+[2024-03-02 14:01:54,302:ERROR:main:File is not a zip file]
+Traceback (most recent call last):
+  File "E:\Wine-Quality\main.py", line 8, in <module>
+    data_ingestion.main()
+  File "e:\wine-quality\src\Wine_Quality\pipeline\stage_01_data_ingestion.py", line 16, in main
+    data_ingestion.extract_zip_file()
+  File "e:\wine-quality\src\Wine_Quality\components\data_ingestion.py", line 27, in extract_zip_file
+    with zipfile.ZipFile(self.config.local_data_file,'r') as zip_ref:
+  File "E:\Wine-Quality\venvnq\lib\zipfile.py", line 1258, in __init__
+    self._RealGetContents()
+  File "E:\Wine-Quality\venvnq\lib\zipfile.py", line 1325, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+[2024-03-02 14:03:12,717:INFO:main: >>>>> stage Data Ingestion stage started  <<<<<<<<<]
+[2024-03-02 14:03:12,730:INFO:common:yaml file: e:\wine-quality\config\config.yaml loaded successfully]
+[2024-03-02 14:03:12,731:INFO:common:yaml file: e:\wine-quality\params.yaml loaded successfully]
+[2024-03-02 14:03:12,732:INFO:common:yaml file: e:\wine-quality\schema.yaml loaded successfully]
+[2024-03-02 14:03:12,733:INFO:common:created directory at: artifacts]
+[2024-03-02 14:03:12,733:INFO:common:created directory at: artifacts/data_ingestion]
+[2024-03-02 14:03:12,734:INFO:data_ingestion:File already exist of size: ~ 143 KB]
+[2024-03-02 14:03:12,735:ERROR:main:File is not a zip file]
+Traceback (most recent call last):
+  File "E:\Wine-Quality\main.py", line 8, in <module>
+    data_ingestion.main()
+  File "e:\wine-quality\src\Wine_Quality\pipeline\stage_01_data_ingestion.py", line 16, in main
+    data_ingestion.extract_zip_file()
+  File "e:\wine-quality\src\Wine_Quality\components\data_ingestion.py", line 27, in extract_zip_file
+    with zipfile.ZipFile(self.config.local_data_file,'r') as zip_ref:
+  File "E:\Wine-Quality\venvnq\lib\zipfile.py", line 1258, in __init__
+    self._RealGetContents()
+  File "E:\Wine-Quality\venvnq\lib\zipfile.py", line 1325, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+[2024-03-02 14:04:39,477:INFO:main: >>>>> stage Data Ingestion stage started  <<<<<<<<<]
+[2024-03-02 14:04:39,477:INFO:common:yaml file: e:\wine-quality\config\config.yaml loaded successfully]
+[2024-03-02 14:04:39,477:INFO:common:yaml file: e:\wine-quality\params.yaml loaded successfully]
+[2024-03-02 14:04:39,477:INFO:common:yaml file: e:\wine-quality\schema.yaml loaded successfully]
+[2024-03-02 14:04:39,477:INFO:common:created directory at: artifacts]
+[2024-03-02 14:04:39,477:INFO:common:created directory at: artifacts/data_ingestion]
+[2024-03-02 14:04:39,477:INFO:data_ingestion:File already exist of size: ~ 143 KB]
+[2024-03-02 14:04:39,477:ERROR:main:File is not a zip file]
+Traceback (most recent call last):
+  File "E:\Wine-Quality\main.py", line 8, in <module>
+    data_ingestion.main()
+  File "e:\wine-quality\src\Wine_Quality\pipeline\stage_01_data_ingestion.py", line 16, in main
+    data_ingestion.extract_zip_file()
+  File "e:\wine-quality\src\Wine_Quality\components\data_ingestion.py", line 27, in extract_zip_file
+    with zipfile.ZipFile(self.config.local_data_file,'r') as zip_ref:
+  File "E:\Wine-Quality\venvnq\lib\zipfile.py", line 1258, in __init__
+    self._RealGetContents()
+  File "E:\Wine-Quality\venvnq\lib\zipfile.py", line 1325, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+[2024-03-02 14:06:21,315:INFO:main: >>>>> stage Data Ingestion stage started  <<<<<<<<<]
+[2024-03-02 14:06:21,315:INFO:common:yaml file: e:\wine-quality\config\config.yaml loaded successfully]
+[2024-03-02 14:06:21,315:INFO:common:yaml file: e:\wine-quality\params.yaml loaded successfully]
+[2024-03-02 14:06:21,315:INFO:common:yaml file: e:\wine-quality\schema.yaml loaded successfully]
+[2024-03-02 14:06:21,315:INFO:common:created directory at: artifacts]
+[2024-03-02 14:06:21,315:INFO:common:created directory at: artifacts/data_ingestion]
+[2024-03-02 14:06:21,315:ERROR:main:"'ConfigBox' object has no attribute 'local_data_file'"]
+Traceback (most recent call last):
+  File "box\box.py", line 503, in box.box.Box.__getitem__
+KeyError: 'local_data_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\box.py", line 536, in box.box.Box.__getattr__
+  File "box\box.py", line 524, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'local_data_file'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\box.py", line 538, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'local_data_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\config_box.py", line 28, in box.config_box.ConfigBox.__getattr__
+  File "box\box.py", line 552, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'local_data_file'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\box.py", line 503, in box.box.Box.__getitem__
+KeyError: 'local_data_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\box.py", line 536, in box.box.Box.__getattr__
+  File "box\box.py", line 524, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'local_data_file'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\box.py", line 538, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'local_data_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Wine-Quality\main.py", line 8, in <module>
+    data_ingestion.main()
+  File "e:\wine-quality\src\Wine_Quality\pipeline\stage_01_data_ingestion.py", line 13, in main
+    data_ingestion_config = config.get_data_ingestion_config()
+  File "e:\wine-quality\src\Wine_Quality\config\configuration.py", line 26, in get_data_ingestion_config
+    local_data_file=config.local_data_file,
+  File "box\config_box.py", line 30, in box.config_box.ConfigBox.__getattr__
+  File "box\box.py", line 552, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'local_data_file'"
+[2024-03-02 14:07:27,089:INFO:main: >>>>> stage Data Ingestion stage started  <<<<<<<<<]
+[2024-03-02 14:07:27,089:INFO:common:yaml file: e:\wine-quality\config\config.yaml loaded successfully]
+[2024-03-02 14:07:27,089:INFO:common:yaml file: e:\wine-quality\params.yaml loaded successfully]
+[2024-03-02 14:07:27,089:INFO:common:yaml file: e:\wine-quality\schema.yaml loaded successfully]
+[2024-03-02 14:07:27,089:INFO:common:created directory at: artifacts]
+[2024-03-02 14:07:27,089:INFO:common:created directory at: artifacts/data_ingestion]
+[2024-03-02 14:07:27,089:ERROR:main:"'ConfigBox' object has no attribute 'local_data_file'"]
+Traceback (most recent call last):
+  File "box\box.py", line 503, in box.box.Box.__getitem__
+KeyError: 'local_data_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\box.py", line 536, in box.box.Box.__getattr__
+  File "box\box.py", line 524, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'local_data_file'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\box.py", line 538, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'local_data_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\config_box.py", line 28, in box.config_box.ConfigBox.__getattr__
+  File "box\box.py", line 552, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'local_data_file'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\box.py", line 503, in box.box.Box.__getitem__
+KeyError: 'local_data_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\box.py", line 536, in box.box.Box.__getattr__
+  File "box\box.py", line 524, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'local_data_file'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\box.py", line 538, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'local_data_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Wine-Quality\main.py", line 8, in <module>
+    data_ingestion.main()
+  File "e:\wine-quality\src\Wine_Quality\pipeline\stage_01_data_ingestion.py", line 13, in main
+    data_ingestion_config = config.get_data_ingestion_config()
+  File "e:\wine-quality\src\Wine_Quality\config\configuration.py", line 26, in get_data_ingestion_config
+    local_data_file=config.local_data_file,
+  File "box\config_box.py", line 30, in box.config_box.ConfigBox.__getattr__
+  File "box\box.py", line 552, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'local_data_file'"
+[2024-03-02 14:07:46,040:INFO:main: >>>>> stage Data Ingestion stage started  <<<<<<<<<]
+[2024-03-02 14:07:46,040:INFO:common:yaml file: e:\wine-quality\config\config.yaml loaded successfully]
+[2024-03-02 14:07:46,040:INFO:common:yaml file: e:\wine-quality\params.yaml loaded successfully]
+[2024-03-02 14:07:46,040:INFO:common:yaml file: e:\wine-quality\schema.yaml loaded successfully]
+[2024-03-02 14:07:46,040:INFO:common:created directory at: artifacts]
+[2024-03-02 14:07:46,040:INFO:common:created directory at: artifacts/data_ingestion]
+[2024-03-02 14:07:46,040:INFO:data_ingestion:File already exist of size: ~ 23 KB]
+[2024-03-02 14:07:46,040:INFO:main:>>>>> stage Data Ingestion stage completed <<<<<<
+
+x=========x]
+[2024-03-02 14:09:21,566:INFO:main: >>>>> stage Data Ingestion stage started  <<<<<<<<<]
+[2024-03-02 14:09:21,566:INFO:common:yaml file: e:\wine-quality\config\config.yaml loaded successfully]
+[2024-03-02 14:09:21,566:INFO:common:yaml file: e:\wine-quality\params.yaml loaded successfully]
+[2024-03-02 14:09:21,566:INFO:common:yaml file: e:\wine-quality\schema.yaml loaded successfully]
+[2024-03-02 14:09:21,566:INFO:common:created directory at: artifacts]
+[2024-03-02 14:09:21,566:INFO:common:created directory at: artifacts/data_ingestion]
+[2024-03-02 14:09:22,245:INFO:data_ingestion:artifacts\data_ingestion\data.zip download with following info: 
+Connection: close
+Content-Length: 23329
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "c69888a4ae59bc5a893392785a938ccd4937981c06ba8a9d6a21aa52b4ab5b6e"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: CA80:3D51EF:2C98A:2EB73:65E32503
+Accept-Ranges: bytes
+Date: Sat, 02 Mar 2024 13:09:23 GMT
+Via: 1.1 varnish
+X-Served-By: cache-mrs10577-MRS
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1709384964.631979,VS0,VE179
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 75b593b1a675a04486c4e3918812e926b0b7bd5f
+Expires: Sat, 02 Mar 2024 13:14:23 GMT
+Source-Age: 0
+
+]
+[2024-03-02 14:09:22,261:INFO:main:>>>>> stage Data Ingestion stage completed <<<<<<
+
+x=========x]
+[2024-03-02 14:10:28,436:INFO:main: >>>>> stage Data Ingestion stage started  <<<<<<<<<]
+[2024-03-02 14:10:28,436:INFO:common:yaml file: e:\wine-quality\config\config.yaml loaded successfully]
+[2024-03-02 14:10:28,436:INFO:common:yaml file: e:\wine-quality\params.yaml loaded successfully]
+[2024-03-02 14:10:28,436:INFO:common:yaml file: e:\wine-quality\schema.yaml loaded successfully]
+[2024-03-02 14:10:28,436:INFO:common:created directory at: artifacts]
+[2024-03-02 14:10:28,436:INFO:common:created directory at: artifacts/data_ingestion]
+[2024-03-02 14:10:29,564:INFO:data_ingestion:artifacts\data_ingestion\data.zip download with following info: 
+Server: GitHub.com
+Date: Sat, 02 Mar 2024 13:10:30 GMT
+Content-Type: text/html; charset=utf-8
+Vary: X-PJAX, X-PJAX-Container, Turbo-Visit, Turbo-Frame, Accept-Encoding, Accept, X-Requested-With
+ETag: W/"ba384705889f6556a4c67c1a52d1a8ce"
+Cache-Control: max-age=0, private, must-revalidate
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+X-Frame-Options: deny
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Referrer-Policy: no-referrer-when-downgrade
+Content-Security-Policy: default-src 'none'; base-uri 'self'; child-src github.com/assets-cdn/worker/ gist.github.com/assets-cdn/worker/; connect-src 'self' uploads.github.com www.githubstatus.com collector.github.com raw.githubusercontent.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com api.githubcopilot.com objects-origin.githubusercontent.com *.actions.githubusercontent.com wss://*.actions.githubusercontent.com productionresultssa0.blob.core.windows.net/ productionresultssa1.blob.core.windows.net/ productionresultssa2.blob.core.windows.net/ productionresultssa3.blob.core.windows.net/ productionresultssa4.blob.core.windows.net/ productionresultssa5.blob.core.windows.net/ productionresultssa6.blob.core.windows.net/ productionresultssa7.blob.core.windows.net/ productionresultssa8.blob.core.windows.net/ productionresultssa9.blob.core.windows.net/ productionresultssa10.blob.core.windows.net/ productionresultssa11.blob.core.windows.net/ productionresultssa12.blob.core.windows.net/ productionresultssa13.blob.core.windows.net/ productionresultssa14.blob.core.windows.net/ productionresultssa15.blob.core.windows.net/ productionresultssa16.blob.core.windows.net/ productionresultssa17.blob.core.windows.net/ productionresultssa18.blob.core.windows.net/ productionresultssa19.blob.core.windows.net/ github-production-repository-image-32fea6.s3.amazonaws.com github-production-release-asset-2e65be.s3.amazonaws.com insights.github.com wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com objects-origin.githubusercontent.com; frame-ancestors 'none'; frame-src viewscreen.githubusercontent.com notebooks.githubusercontent.com; img-src 'self' data: github.githubassets.com media.githubusercontent.com camo.githubusercontent.com identicons.github.com avatars.githubusercontent.com github-cloud.s3.amazonaws.com objects.githubusercontent.com secured-user-images.githubusercontent.com/ user-images.githubusercontent.com/ private-user-images.githubusercontent.com opengraph.githubassets.com github-production-user-asset-6210df.s3.amazonaws.com customer-stories-feed.github.com spotlights-feed.github.com objects-origin.githubusercontent.com *.githubusercontent.com; manifest-src 'self'; media-src github.com user-images.githubusercontent.com/ secured-user-images.githubusercontent.com/ private-user-images.githubusercontent.com github-production-user-asset-6210df.s3.amazonaws.com gist.github.com; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; upgrade-insecure-requests; worker-src github.com/assets-cdn/worker/ gist.github.com/assets-cdn/worker/
+Set-Cookie: _gh_sess=BgfgjUT9Vlr9OkRfkgWVvwYVBEZsEArdSKPrVaD%2F6olyqsPxrJplaosfQh38IzC%2FyaofEfGqbrlrVhNdjOIp5mt78iqbUouMyUKq6L9q8oBFDrHaK%2Bp7umSve%2BtwdlTmPbXq2ZmR6zsucb9%2BBdT0ZFmwIej6OklmV49TELT7vuHNOG8dHeqhN62l2cCNnVElOhbFqgVwTQu0LttqcZrOTvsuZB%2FtV3qt6sSd7hhnQlj0j0dmqjnz5K4bNsj4gRwBokA4WVZYCPuG5imEpPO0mg%3D%3D--kUCqvXCY2%2FM6YTLV--KqdRrC2G4QTB2pLdgBbyEA%3D%3D; Path=/; HttpOnly; Secure; SameSite=Lax
+Set-Cookie: _octo=GH1.1.1837164271.1709385030; Path=/; Domain=github.com; Expires=Sun, 02 Mar 2025 13:10:30 GMT; Secure; SameSite=Lax
+Set-Cookie: logged_in=no; Path=/; Domain=github.com; Expires=Sun, 02 Mar 2025 13:10:30 GMT; HttpOnly; Secure; SameSite=Lax
+Accept-Ranges: bytes
+Transfer-Encoding: chunked
+X-GitHub-Request-Id: 3C94:31ED00:22E6FFC:2373EDF:65E32546
+connection: close
+
+]
+[2024-03-02 14:10:29,620:ERROR:main:File is not a zip file]
+Traceback (most recent call last):
+  File "E:\Wine-Quality\main.py", line 8, in <module>
+    data_ingestion.main()
+  File "e:\wine-quality\src\Wine_Quality\pipeline\stage_01_data_ingestion.py", line 16, in main
+    data_ingestion.extract_zip_file()
+  File "e:\wine-quality\src\Wine_Quality\components\data_ingestion.py", line 27, in extract_zip_file
+    with zipfile.ZipFile(self.config.local_data_file,'r') as zip_ref:
+  File "E:\Wine-Quality\venvnq\lib\zipfile.py", line 1258, in __init__
+    self._RealGetContents()
+  File "E:\Wine-Quality\venvnq\lib\zipfile.py", line 1325, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+[2024-03-02 14:15:22,672:INFO:main: >>>>> stage Data Ingestion stage started  <<<<<<<<<]
+[2024-03-02 14:15:22,672:INFO:common:yaml file: e:\wine-quality\config\config.yaml loaded successfully]
+[2024-03-02 14:15:22,672:INFO:common:yaml file: e:\wine-quality\params.yaml loaded successfully]
+[2024-03-02 14:15:22,672:INFO:common:yaml file: e:\wine-quality\schema.yaml loaded successfully]
+[2024-03-02 14:15:22,672:INFO:common:created directory at: artifacts]
+[2024-03-02 14:15:22,672:INFO:common:created directory at: artifacts/data_ingestion]
+[2024-03-02 14:15:23,423:INFO:data_ingestion:artifacts\data_ingestion\data.zip download with following info: 
+Server: GitHub.com
+Date: Sat, 02 Mar 2024 13:15:24 GMT
+Content-Type: text/html; charset=utf-8
+Vary: X-PJAX, X-PJAX-Container, Turbo-Visit, Turbo-Frame, Accept-Encoding, Accept, X-Requested-With
+ETag: W/"335d9c224a4ef7afde5afa2d72b8e4fc"
+Cache-Control: max-age=0, private, must-revalidate
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+X-Frame-Options: deny
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Referrer-Policy: no-referrer-when-downgrade
+Content-Security-Policy: default-src 'none'; base-uri 'self'; child-src github.com/assets-cdn/worker/ gist.github.com/assets-cdn/worker/; connect-src 'self' uploads.github.com www.githubstatus.com collector.github.com raw.githubusercontent.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com api.githubcopilot.com objects-origin.githubusercontent.com *.actions.githubusercontent.com wss://*.actions.githubusercontent.com productionresultssa0.blob.core.windows.net/ productionresultssa1.blob.core.windows.net/ productionresultssa2.blob.core.windows.net/ productionresultssa3.blob.core.windows.net/ productionresultssa4.blob.core.windows.net/ productionresultssa5.blob.core.windows.net/ productionresultssa6.blob.core.windows.net/ productionresultssa7.blob.core.windows.net/ productionresultssa8.blob.core.windows.net/ productionresultssa9.blob.core.windows.net/ productionresultssa10.blob.core.windows.net/ productionresultssa11.blob.core.windows.net/ productionresultssa12.blob.core.windows.net/ productionresultssa13.blob.core.windows.net/ productionresultssa14.blob.core.windows.net/ productionresultssa15.blob.core.windows.net/ productionresultssa16.blob.core.windows.net/ productionresultssa17.blob.core.windows.net/ productionresultssa18.blob.core.windows.net/ productionresultssa19.blob.core.windows.net/ github-production-repository-image-32fea6.s3.amazonaws.com github-production-release-asset-2e65be.s3.amazonaws.com insights.github.com wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com objects-origin.githubusercontent.com; frame-ancestors 'none'; frame-src viewscreen.githubusercontent.com notebooks.githubusercontent.com; img-src 'self' data: github.githubassets.com media.githubusercontent.com camo.githubusercontent.com identicons.github.com avatars.githubusercontent.com github-cloud.s3.amazonaws.com objects.githubusercontent.com secured-user-images.githubusercontent.com/ user-images.githubusercontent.com/ private-user-images.githubusercontent.com opengraph.githubassets.com github-production-user-asset-6210df.s3.amazonaws.com customer-stories-feed.github.com spotlights-feed.github.com objects-origin.githubusercontent.com *.githubusercontent.com; manifest-src 'self'; media-src github.com user-images.githubusercontent.com/ secured-user-images.githubusercontent.com/ private-user-images.githubusercontent.com github-production-user-asset-6210df.s3.amazonaws.com gist.github.com; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; upgrade-insecure-requests; worker-src github.com/assets-cdn/worker/ gist.github.com/assets-cdn/worker/
+Set-Cookie: _gh_sess=o49mEX0teFnIm%2FQ9RKJtUDqQqIge2JbqF%2BgFbBoMg2RhNdD7wibEA9AXKJyo%2Bv0cW8ncbegryCcukKDoGedNhZiaMtQYNXNltUkOxH5%2B0eF0VQo4yrlH7qeMrq%2F5uXYhlidx2P%2FUtgwVL83zaH5S8qjZyz6CzANIwsiDXRwTuuEX%2FeMcN2p1DuOx8h798F%2FGWj96aiqQDMAB9U8klPxJqi%2ByBL7Jwp3eRATLJpsq01IsqDhCkyQ9jmWufUjCE%2BYlxCwxPna1AFGYA%2Fg%2FzRoWnw%3D%3D--iuSQiqtY2zqzLISE--b4NnTtzXiMlGjpZYq37c5g%3D%3D; Path=/; HttpOnly; Secure; SameSite=Lax
+Set-Cookie: _octo=GH1.1.1449675719.1709385324; Path=/; Domain=github.com; Expires=Sun, 02 Mar 2025 13:15:24 GMT; Secure; SameSite=Lax
+Set-Cookie: logged_in=no; Path=/; Domain=github.com; Expires=Sun, 02 Mar 2025 13:15:24 GMT; HttpOnly; Secure; SameSite=Lax
+Accept-Ranges: bytes
+Transfer-Encoding: chunked
+X-GitHub-Request-Id: 571A:31ED00:23434A1:23D1797:65E3266C
+connection: close
+
+]
+[2024-03-02 14:15:23,532:ERROR:main:File is not a zip file]
+Traceback (most recent call last):
+  File "E:\Wine-Quality\main.py", line 8, in <module>
+    data_ingestion.main()
+  File "e:\wine-quality\src\Wine_Quality\pipeline\stage_01_data_ingestion.py", line 16, in main
+    data_ingestion.extract_zip_file()
+  File "e:\wine-quality\src\Wine_Quality\components\data_ingestion.py", line 27, in extract_zip_file
+    with zipfile.ZipFile(self.config.local_data_file,'r') as zip_ref:
+  File "E:\Wine-Quality\venvnq\lib\zipfile.py", line 1258, in __init__
+    self._RealGetContents()
+  File "E:\Wine-Quality\venvnq\lib\zipfile.py", line 1325, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+[2024-03-02 14:16:25,165:INFO:main: >>>>> stage Data Ingestion stage started  <<<<<<<<<]
+[2024-03-02 14:16:25,185:INFO:common:yaml file: e:\wine-quality\config\config.yaml loaded successfully]
+[2024-03-02 14:16:25,186:INFO:common:yaml file: e:\wine-quality\params.yaml loaded successfully]
+[2024-03-02 14:16:25,186:INFO:common:yaml file: e:\wine-quality\schema.yaml loaded successfully]
+[2024-03-02 14:16:25,186:INFO:common:created directory at: artifacts]
+[2024-03-02 14:16:25,186:INFO:common:created directory at: artifacts/data_ingestion]
+[2024-03-02 14:16:25,826:INFO:data_ingestion:artifacts\data_ingestion\data.zip download with following info: 
+Connection: close
+Content-Length: 23329
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "c69888a4ae59bc5a893392785a938ccd4937981c06ba8a9d6a21aa52b4ab5b6e"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: CA80:3D51EF:2C98A:2EB73:65E32503
+Accept-Ranges: bytes
+Date: Sat, 02 Mar 2024 13:16:27 GMT
+Via: 1.1 varnish
+X-Served-By: cache-mrs1050087-MRS
+X-Cache: HIT
+X-Cache-Hits: 1
+X-Timer: S1709385387.255362,VS0,VE148
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 3f8488e9fed572af63386fe3f2b01f67baef44f4
+Expires: Sat, 02 Mar 2024 13:21:27 GMT
+Source-Age: 0
+
+]
+[2024-03-02 14:16:25,857:INFO:main:>>>>> stage Data Ingestion stage completed <<<<<<
+
+x=========x]
+[2024-03-02 14:19:21,143:INFO:main: >>>>> stage Data Ingestion stage started  <<<<<<<<<]
+[2024-03-02 14:19:21,144:INFO:common:yaml file: e:\wine-quality\config\config.yaml loaded successfully]
+[2024-03-02 14:19:21,145:INFO:common:yaml file: e:\wine-quality\params.yaml loaded successfully]
+[2024-03-02 14:19:21,145:INFO:common:yaml file: e:\wine-quality\schema.yaml loaded successfully]
+[2024-03-02 14:19:21,180:INFO:common:created directory at: artifacts]
+[2024-03-02 14:19:21,181:INFO:common:created directory at: artifacts/data_ingestion]
+[2024-03-02 14:19:21,613:INFO:data_ingestion:artifacts\data_ingestion\data.zip download with following info: 
+Connection: close
+Content-Length: 23329
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "c69888a4ae59bc5a893392785a938ccd4937981c06ba8a9d6a21aa52b4ab5b6e"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: CA80:3D51EF:2C98A:2EB73:65E32503
+Accept-Ranges: bytes
+Date: Sat, 02 Mar 2024 13:19:23 GMT
+Via: 1.1 varnish
+X-Served-By: cache-mrs1050105-MRS
+X-Cache: HIT
+X-Cache-Hits: 1
+X-Timer: S1709385563.176340,VS0,VE1
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: d4120d5b58c4bdb27d66faae8e5d5ac2761b2435
+Expires: Sat, 02 Mar 2024 13:24:23 GMT
+Source-Age: 176
+
+]
+[2024-03-02 14:19:21,624:INFO:main:>>>>> stage Data Ingestion stage completed <<<<<<
+
+x=========x]
