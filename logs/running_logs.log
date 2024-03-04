@@ -456,3 +456,180 @@ Source-Age: 0
 [2024-03-02 15:26:01,755:INFO:main:>>>>> stage Data Ingestion stage completed <<<<<<
 
 x=========x]
+[2024-03-02 16:16:55,858:INFO:main: >>>>> stage Data Ingestion stage started  <<<<<<<<<]
+[2024-03-02 16:16:55,881:INFO:common:yaml file: e:\wine-quality\config\config.yaml loaded successfully]
+[2024-03-02 16:16:55,885:INFO:common:yaml file: e:\wine-quality\params.yaml loaded successfully]
+[2024-03-02 16:16:55,902:INFO:common:yaml file: e:\wine-quality\schema.yaml loaded successfully]
+[2024-03-02 16:16:55,903:INFO:common:created directory at: artifacts]
+[2024-03-02 16:16:55,904:INFO:common:created directory at: artifacts/data_ingestion]
+[2024-03-02 16:16:56,889:INFO:data_ingestion:artifacts\data_ingestion\data.zip download with following info: 
+Connection: close
+Content-Length: 23329
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "c69888a4ae59bc5a893392785a938ccd4937981c06ba8a9d6a21aa52b4ab5b6e"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: CA80:3D51EF:2C98A:2EB73:65E32503
+Accept-Ranges: bytes
+Date: Sat, 02 Mar 2024 15:16:58 GMT
+Via: 1.1 varnish
+X-Served-By: cache-mrs1050107-MRS
+X-Cache: HIT
+X-Cache-Hits: 1
+X-Timer: S1709392618.325810,VS0,VE153
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: c6d4f38169c0fc3833e720c69a04df98e50f8bb8
+Expires: Sat, 02 Mar 2024 15:21:58 GMT
+Source-Age: 0
+
+]
+[2024-03-02 16:16:56,988:INFO:main:>>>>> stage Data Ingestion stage completed <<<<<<
+
+x=========x]
+[2024-03-02 17:00:16,969:INFO:common:yaml file: e:\wine-quality\config\config.yaml loaded successfully]
+[2024-03-02 17:00:16,973:INFO:common:yaml file: e:\wine-quality\params.yaml loaded successfully]
+[2024-03-02 17:00:16,993:INFO:common:yaml file: e:\wine-quality\schema.yaml loaded successfully]
+[2024-03-02 17:00:16,999:INFO:common:created directory at: artifacts]
+[2024-03-02 17:00:17,001:INFO:common:created directory at: artifacts/data_validation]
+[2024-03-02 17:01:12,465:INFO:common:yaml file: e:\wine-quality\config\config.yaml loaded successfully]
+[2024-03-02 17:01:12,472:INFO:common:yaml file: e:\wine-quality\params.yaml loaded successfully]
+[2024-03-02 17:01:12,484:INFO:common:yaml file: e:\wine-quality\schema.yaml loaded successfully]
+[2024-03-02 17:01:12,488:INFO:common:created directory at: artifacts]
+[2024-03-02 17:01:12,492:INFO:common:created directory at: artifacts/data_validation]
+[2024-03-02 17:07:54,437:INFO:common:yaml file: e:\wine-quality\config\config.yaml loaded successfully]
+[2024-03-02 17:07:54,444:INFO:common:yaml file: e:\wine-quality\params.yaml loaded successfully]
+[2024-03-02 17:07:54,458:INFO:common:yaml file: e:\wine-quality\schema.yaml loaded successfully]
+[2024-03-02 17:07:54,462:INFO:common:created directory at: artifacts]
+[2024-03-02 17:07:54,465:INFO:common:created directory at: artifacts/data_validation]
+[2024-03-04 11:43:35,636:INFO:common:yaml file: e:\wine-quality\config\config.yaml loaded successfully]
+[2024-03-04 11:43:35,810:INFO:common:yaml file: e:\wine-quality\params.yaml loaded successfully]
+[2024-03-04 11:43:35,870:INFO:common:yaml file: e:\wine-quality\schema.yaml loaded successfully]
+[2024-03-04 11:43:35,872:INFO:common:created directory at: artifacts]
+[2024-03-04 11:43:35,873:INFO:common:created directory at: artifacts/data_validation]
+[2024-03-04 11:55:01,032:INFO:common:yaml file: e:\wine-quality\config\config.yaml loaded successfully]
+[2024-03-04 11:55:01,034:INFO:common:yaml file: e:\wine-quality\params.yaml loaded successfully]
+[2024-03-04 11:55:02,958:INFO:common:yaml file: e:\wine-quality\schema.yaml loaded successfully]
+[2024-03-04 11:55:02,959:INFO:common:created directory at: artifacts]
+[2024-03-04 11:55:02,960:INFO:common:created directory at: artifacts/data_validation]
+[2024-03-04 11:55:33,473:INFO:common:yaml file: e:\wine-quality\config\config.yaml loaded successfully]
+[2024-03-04 11:55:33,476:INFO:common:yaml file: e:\wine-quality\params.yaml loaded successfully]
+[2024-03-04 11:55:33,488:INFO:common:yaml file: e:\wine-quality\schema.yaml loaded successfully]
+[2024-03-04 11:55:33,490:INFO:common:created directory at: artifacts]
+[2024-03-04 11:55:33,493:INFO:common:created directory at: artifacts/data_validation]
+[2024-03-04 12:27:46,678:INFO:common:yaml file: e:\wine-quality\config\config.yaml loaded successfully]
+[2024-03-04 12:27:46,682:INFO:common:yaml file: e:\wine-quality\params.yaml loaded successfully]
+[2024-03-04 12:27:46,713:INFO:common:yaml file: e:\wine-quality\schema.yaml loaded successfully]
+[2024-03-04 12:27:46,784:INFO:common:created directory at: artifacts]
+[2024-03-04 12:27:46,831:INFO:common:created directory at: artifacts/data_validation]
+[2024-03-04 12:29:14,844:INFO:main: >>>>> stage Data Ingestion stage started  <<<<<<<<<]
+[2024-03-04 12:29:14,846:INFO:common:yaml file: e:\wine-quality\config\config.yaml loaded successfully]
+[2024-03-04 12:29:14,846:INFO:common:yaml file: e:\wine-quality\params.yaml loaded successfully]
+[2024-03-04 12:29:14,848:INFO:common:yaml file: e:\wine-quality\schema.yaml loaded successfully]
+[2024-03-04 12:29:14,849:INFO:common:created directory at: artifacts]
+[2024-03-04 12:29:14,849:INFO:common:created directory at: artifacts/data_ingestion]
+[2024-03-04 12:29:17,149:INFO:data_ingestion:artifacts\data_ingestion\data.zip download with following info: 
+Connection: close
+Content-Length: 23329
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "c69888a4ae59bc5a893392785a938ccd4937981c06ba8a9d6a21aa52b4ab5b6e"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 0D68:3485EE:15BE580:16CDDB7:65E5B08F
+Accept-Ranges: bytes
+Date: Mon, 04 Mar 2024 11:29:19 GMT
+Via: 1.1 varnish
+X-Served-By: cache-mrs10539-MRS
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1709551759.397629,VS0,VE165
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 61a672c6a0b38e481ee575c7086e5a4d68c792eb
+Expires: Mon, 04 Mar 2024 11:34:19 GMT
+Source-Age: 0
+
+]
+[2024-03-04 12:29:17,226:INFO:main:>>>>> stage Data Ingestion stage completed <<<<<<
+
+x=========x]
+[2024-03-04 12:29:17,227:INFO:main: >>>>> stage Data Validation stage started  <<<<<<<<<]
+[2024-03-04 12:29:17,230:INFO:common:yaml file: e:\wine-quality\config\config.yaml loaded successfully]
+[2024-03-04 12:29:17,230:INFO:common:yaml file: e:\wine-quality\params.yaml loaded successfully]
+[2024-03-04 12:29:17,232:INFO:common:yaml file: e:\wine-quality\schema.yaml loaded successfully]
+[2024-03-04 12:29:17,234:INFO:common:created directory at: artifacts]
+[2024-03-04 12:29:17,234:INFO:common:created directory at: artifacts/data_validation]
+[2024-03-04 12:29:17,235:ERROR:main:DataValidationConfig.__init__() got an unexpected keyword argument 'STATUS_FILE']
+Traceback (most recent call last):
+  File "E:\Wine-Quality\main.py", line 21, in <module>
+    data_ingestion.main()
+  File "e:\wine-quality\src\Wine_Quality\pipeline\stage_02_data_validation.py", line 13, in main
+    data_validation_config = config.get_data_validation_config()
+  File "e:\wine-quality\src\Wine_Quality\config\configuration.py", line 38, in get_data_validation_config
+    data_validation_config = DataValidationConfig(
+TypeError: DataValidationConfig.__init__() got an unexpected keyword argument 'STATUS_FILE'
+[2024-03-04 12:34:10,892:INFO:main: >>>>> stage Data Ingestion stage started  <<<<<<<<<]
+[2024-03-04 12:34:10,895:INFO:common:yaml file: e:\wine-quality\config\config.yaml loaded successfully]
+[2024-03-04 12:34:10,896:INFO:common:yaml file: e:\wine-quality\params.yaml loaded successfully]
+[2024-03-04 12:34:10,897:INFO:common:yaml file: e:\wine-quality\schema.yaml loaded successfully]
+[2024-03-04 12:34:10,898:INFO:common:created directory at: artifacts]
+[2024-03-04 12:34:10,898:INFO:common:created directory at: artifacts/data_ingestion]
+[2024-03-04 12:34:10,899:INFO:data_ingestion:File already exist of size: ~ 23 KB]
+[2024-03-04 12:34:10,902:INFO:main:>>>>> stage Data Ingestion stage completed <<<<<<
+
+x=========x]
+[2024-03-04 12:34:10,902:INFO:main: >>>>> stage Data Validation stage started  <<<<<<<<<]
+[2024-03-04 12:34:10,906:INFO:common:yaml file: e:\wine-quality\config\config.yaml loaded successfully]
+[2024-03-04 12:34:10,907:INFO:common:yaml file: e:\wine-quality\params.yaml loaded successfully]
+[2024-03-04 12:34:10,909:INFO:common:yaml file: e:\wine-quality\schema.yaml loaded successfully]
+[2024-03-04 12:34:10,910:INFO:common:created directory at: artifacts]
+[2024-03-04 12:34:10,910:INFO:common:created directory at: artifacts/data_validation]
+[2024-03-04 12:34:10,910:ERROR:main:DataValidationConfig.__init__() got an unexpected keyword argument 'STATUS_FILE']
+Traceback (most recent call last):
+  File "E:\Wine-Quality\main.py", line 21, in <module>
+    data_ingestion.main()
+  File "e:\wine-quality\src\Wine_Quality\pipeline\stage_02_data_validation.py", line 13, in main
+    data_validation_config = config.get_data_validation_config()
+  File "e:\wine-quality\src\Wine_Quality\config\configuration.py", line 38, in get_data_validation_config
+    data_validation_config = DataValidationConfig(
+TypeError: DataValidationConfig.__init__() got an unexpected keyword argument 'STATUS_FILE'
+[2024-03-04 12:35:24,927:INFO:common:yaml file: e:\wine-quality\config\config.yaml loaded successfully]
+[2024-03-04 12:35:24,930:INFO:common:yaml file: e:\wine-quality\params.yaml loaded successfully]
+[2024-03-04 12:35:24,935:INFO:common:yaml file: e:\wine-quality\schema.yaml loaded successfully]
+[2024-03-04 12:35:24,940:INFO:common:created directory at: artifacts]
+[2024-03-04 12:35:24,941:INFO:common:created directory at: artifacts/data_validation]
+[2024-03-04 12:35:39,894:INFO:main: >>>>> stage Data Ingestion stage started  <<<<<<<<<]
+[2024-03-04 12:35:39,896:INFO:common:yaml file: e:\wine-quality\config\config.yaml loaded successfully]
+[2024-03-04 12:35:39,896:INFO:common:yaml file: e:\wine-quality\params.yaml loaded successfully]
+[2024-03-04 12:35:39,898:INFO:common:yaml file: e:\wine-quality\schema.yaml loaded successfully]
+[2024-03-04 12:35:39,899:INFO:common:created directory at: artifacts]
+[2024-03-04 12:35:39,899:INFO:common:created directory at: artifacts/data_ingestion]
+[2024-03-04 12:35:39,899:INFO:data_ingestion:File already exist of size: ~ 23 KB]
+[2024-03-04 12:35:39,901:INFO:main:>>>>> stage Data Ingestion stage completed <<<<<<
+
+x=========x]
+[2024-03-04 12:35:39,902:INFO:main: >>>>> stage Data Validation stage started  <<<<<<<<<]
+[2024-03-04 12:35:39,904:INFO:common:yaml file: e:\wine-quality\config\config.yaml loaded successfully]
+[2024-03-04 12:35:39,905:INFO:common:yaml file: e:\wine-quality\params.yaml loaded successfully]
+[2024-03-04 12:35:39,907:INFO:common:yaml file: e:\wine-quality\schema.yaml loaded successfully]
+[2024-03-04 12:35:39,908:INFO:common:created directory at: artifacts]
+[2024-03-04 12:35:39,908:INFO:common:created directory at: artifacts/data_validation]
+[2024-03-04 12:35:39,909:ERROR:main:DataValidationConfig.__init__() got an unexpected keyword argument 'STATUS_FILE']
+Traceback (most recent call last):
+  File "E:\Wine-Quality\main.py", line 21, in <module>
+    data_ingestion.main()
+  File "e:\wine-quality\src\Wine_Quality\pipeline\stage_02_data_validation.py", line 13, in main
+    data_validation_config = config.get_data_validation_config()
+  File "e:\wine-quality\src\Wine_Quality\config\configuration.py", line 38, in get_data_validation_config
+    data_validation_config = DataValidationConfig(
+TypeError: DataValidationConfig.__init__() got an unexpected keyword argument 'STATUS_FILE'
