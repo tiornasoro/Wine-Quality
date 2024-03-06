@@ -2,6 +2,7 @@ from Wine_Quality.config.configuration import ConfigurationManager
 from Wine_Quality.components.data_ingestion import DataIngestion
 from Wine_Quality import logger
 
+
 STAGE_NAME= "Data Ingestion stage"
 
 class DataIngestionTrainingPipeline:
