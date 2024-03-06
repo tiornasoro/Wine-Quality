@@ -965,3 +965,16 @@ Traceback (most recent call last):
   File "e:\wine-quality\src\Wine_Quality\config\configuration.py", line 39, in get_data_validation_config
     data_validation_config = DataValidationConfig(
 TypeError: DataValidationConfig.__init__() got an unexpected keyword argument 'STATUS_FILE'
+[2024-03-06 17:34:40,628:INFO:common:yaml file: e:\wine-quality\config\config.yaml loaded successfully]
+[2024-03-06 17:34:40,632:INFO:common:yaml file: e:\wine-quality\params.yaml loaded successfully]
+[2024-03-06 17:34:40,640:INFO:common:yaml file: e:\wine-quality\schema.yaml loaded successfully]
+[2024-03-06 17:34:40,643:INFO:common:created directory at: artifacts]
+[2024-03-06 17:34:40,646:INFO:common:created directory at: artifacts/data_transformation]
+[2024-03-06 17:34:40,713:INFO:3699021339:Splited data into training and test sets]
+[2024-03-06 17:34:40,715:INFO:3699021339:(1199, 12)]
+[2024-03-06 17:34:40,717:INFO:3699021339:(400, 12)]
+[2024-03-06 17:34:47,151:INFO:common:yaml file: e:\wine-quality\config\config.yaml loaded successfully]
+[2024-03-06 17:34:47,158:INFO:common:yaml file: e:\wine-quality\params.yaml loaded successfully]
+[2024-03-06 17:34:47,167:INFO:common:yaml file: e:\wine-quality\schema.yaml loaded successfully]
+[2024-03-06 17:34:47,169:INFO:common:created directory at: artifacts]
+[2024-03-06 17:34:47,173:INFO:common:created directory at: artifacts/model_trainer]
