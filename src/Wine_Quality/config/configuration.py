@@ -2,7 +2,7 @@ from Wine_Quality.constants import *
 from Wine_Quality.utils.common import read_yaml, create_directories
 from Wine_Quality.entity.config_entity import DataIngestionConfig
 from Wine_Quality.entity.config_entity import DataValidationConfig,DataTransformationConfig
-from Wine_Quality.entity.config_entity import ModelTrainerConfig
+from Wine_Quality.entity.config_entity import ModelTrainerConfig, ModelEvaluationConfig
 
 class ConfigurationManager:
     def __init__(
@@ -76,3 +76,23 @@ class ConfigurationManager:
         )
 
         return model_trainer_config
+    
+    def get_model_evaluation_config(self) -> ModelEvaluationConfig:
+        config = self.config.model_evaluation
+        params = self.params.ElasticNet
+        schema =  self.schema.TARGET_COLUMN
+
+        create_directories([config.root_dir])
+
+        model_evaluation_config = ModelEvaluationConfig(
+            root_dir=config.root_dir,
+            test_data_path=config.test_data_path,
+            model_path = config.model_path,
+            all_params=params,
+            metric_file_name = config.metric_file_name,
+            target_column = schema.name,
+            mlflow_uri="https://dagshub.com/tiornasoro/Wine-Quality.mlflow ",
+           
+        )
+
+        return model_evaluation_config

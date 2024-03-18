@@ -4,7 +4,7 @@ from Wine_Quality import logger
 
 STAGE_NAME= "Data Validation stage"
 
-class DataValidationTrainigPipeline:
+class DataValidationTrainingPipeline:
     def __init__(self) :
         pass
 
@@ -14,10 +14,10 @@ class DataValidationTrainigPipeline:
         data_validation = DataValidation(config=data_validation_config)
         data_validation.validate_all_columns()
 
-if __name__=='__name__':
+if __name__=='__main__':
     try:
         logger.info(f" >>>>> stage {STAGE_NAME} started  <<<<<<<<<")
-        obj=DataValidationTrainigPipeline()
+        obj=DataValidationTrainingPipeline()
         obj.main()
         logger.info(f">>>>> stage {STAGE_NAME} completed <<<<<<\n\nx=========x")
 

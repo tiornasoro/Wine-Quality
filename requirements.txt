@@ -12,4 +12,5 @@ joblib
 types-pyYAML
 Flask
 Flask-cors
+Werkzeug==2.2.2
 -e .
